@@ -1,0 +1,46 @@
+/*To make sure we use the whole window*/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.day-view {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+#left-container,
+#right-container {
+  display: flex;
+  flex-direction: column; /*Stack childs vertically*/
+  height: 100%;
+  overflow: hidden;
+}
+
+#left-container {
+  width: 80px;
+  background-color: #f3f3f3;
+  border-right: 1px solid #ccc;
+}
+
+#right-container {
+  flex: 1; /*Right container take all remaining horizontal space that left container didn't take*/
+  background-color: #ffffff;
+}
+
+.time-label {
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hour-block {
+  flex: 1; /*Equal height per hour block*/
+  border-bottom: 1px solid #eee;
+}
